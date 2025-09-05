@@ -1,0 +1,25 @@
+@model IEnumerable<Doctor>
+
+Search Results:
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Doctor Name</th>
+            <th>Doctor Email</th>
+            <th>Doctor PhoneNumber</th>
+            <th>Doctor Specialty</th>
+        </tr>      
+    </thead>
+    <tbody>
+        @foreach (var pr in Model){
+            <tr>
+                <td>@pr.Person.Name</td>
+                <td>@pr.Person.Email</td>
+                <td>@pr.Person.PhoneNumber</td>
+                <td>@pr.Specialty</td>
+               
+            </tr>
+        }
+    </tbody>
+</table>

@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\HospitallApp_DBMS.props" />
+</Project>

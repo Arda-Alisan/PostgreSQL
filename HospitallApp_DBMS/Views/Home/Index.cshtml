@@ -1,0 +1,16 @@
+﻿@model Appointment
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+
+<form asp-controller="Home" asp-action="SearchByProductName" method="post">
+    <p>
+        <input type="text" name="name" class="form-control" placeholder="Search by product name:" />
+    </p>
+    <button type="submit" class="btn btn-primary">Search</button>
+</form>

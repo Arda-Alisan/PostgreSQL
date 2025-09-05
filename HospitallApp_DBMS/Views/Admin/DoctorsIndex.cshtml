@@ -1,0 +1,37 @@
+@model IEnumerable<Doctor>
+    
+<div class="container d-flex justify-content-between">
+<h3 style="">Doctor Details </h3>
+<a href="/Admin/PersonsCreate"><button class="btn btn-primary btn-sm" style="border-radius: 10px;">Add New Doctor</button></a>
+</div>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Doctor Id</th>
+            <th>Name</th>
+            <th>Email</th>
+            <th>PhoneNumber</th>
+            <th>Specialty</th>
+            <th>Clinic</th>
+        </tr>      
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model){
+            <tr>
+                <td>@doctor.PersonId</td>
+                <td>@doctor.Person.Name</td>
+                <td>@doctor.Person.Email</td>
+                <td>@doctor.Person.PhoneNumber</td>
+                <td>@doctor.Specialty</td>
+                <td>@doctor.Clinic.ClinicName</td>
+                <td>
+                    <a asp-controller="Admin" asp-action="PersonsUpdate" asp-route-id="@doctor.PersonId" class="btn btn-primary btn-sm">Update</a>
+                    <a asp-controller="Admin" asp-action="PersonsDelete" asp-route-id="@doctor.PersonId" class="btn btn-danger btn-sm">Delete</a>
+                    
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+

@@ -1,0 +1,11 @@
+@model Person
+
+<p> Do you want to delete the Person with the ID @Model.PersonId </p>
+
+<form asp-action="PersonsDelete" method="post">
+    <input type="hidden" name="PersonId" asp-for="@Model.PersonId">
+    <button type="submit" class="btn btn-outline-danger">Yes</button>
+</form>
+<form asp-action="@ViewBag.Index" method="get">
+    <button type="submit" class="btn btn-outline-primary">No</button>
+</form>

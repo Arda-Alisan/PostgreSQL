@@ -1,0 +1,25 @@
+@using HospitallApp_DBMS.Models
+@model IEnumerable<Doctor>
+
+<h2>Doctors</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Specialty</th>
+            <th>Clinic</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var doctor in Model)
+        {
+            <tr>
+                <td>@doctor.Person.Name</td>
+                <td>@doctor.Person.Email</td> 
+                <td>@doctor.Specialty</td>
+                <td>@doctor.Clinic.ClinicName</td>  
+            </tr>
+        }
+    </tbody>
+</table>

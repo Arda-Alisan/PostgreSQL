@@ -1,0 +1,11 @@
+@model Patient
+
+<form asp-controller="Admin" asp-action="PatientsCreate" method="post">
+    <input type="hidden" asp-for="PersonId" value="@ViewBag.personid">
+    <div class="mb-3">
+        <label asp-for="MedicalHistory" class="form-label"> MedicalHistory</label>
+        <input asp-for="MedicalHistory" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Patient</button>
+</form>

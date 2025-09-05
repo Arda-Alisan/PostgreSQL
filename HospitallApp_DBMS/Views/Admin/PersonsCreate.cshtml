@@ -1,0 +1,35 @@
+@model Person
+
+<form asp-controller="Admin" asp-action="PersonsCreate" method="post">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"> Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PhoneNumber" class="form-label">PhoneNumber</label>
+        <input asp-for="PhoneNumber" class="form-control">
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="doctor" class="form-check-input" type="checkbox" value="true" />
+        <label asp-for="doctor" class="form-check-label">Is Doctor?</label>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="patient" class="form-check-input" type="checkbox" value="true" />
+        <label asp-for="patient" class="form-check-label">Is Patient?</label>
+    </div>
+
+    <div class="mb-3 form-check">
+        <input asp-for="nurse" class="form-check-input" type="checkbox" value="true" />
+        <label asp-for="nurse" class="form-check-label">Is Nurse?</label>
+    </div>
+    
+    <button type="submit" class="btn btn-primary">Create Person</button>
+</form>

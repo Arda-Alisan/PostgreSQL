@@ -1,0 +1,15 @@
+@model Doctor
+<form asp-controller="Admin" asp-action="DoctorsCreate" method="post">
+    <input type="hidden" asp-for="PersonId" value="@ViewBag.personId">
+    <div class="mb-3">
+        <label asp-for="Specialty" class="form-label"> Specialty</label>
+        <input asp-for="Specialty" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="ClinicId" class="form-label">Clinic Id</label>
+        <input asp-for="ClinicId" class="form-control">
+    </div>
+
+    <button type="submit" class="btn btn-primary">Create Doctor</button>
+</form>

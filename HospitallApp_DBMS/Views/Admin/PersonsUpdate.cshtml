@@ -1,0 +1,25 @@
+@model Person
+
+<form asp-controller="Admin" asp-action="PersonsUpdate" method="post">
+    <input type="hidden" name="PersonId">
+    <div class="mb-3">
+        <label asp-for="Name" class="form-label"> Name</label>
+        <input asp-for="Name" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="Email" class="form-label">Email</label>
+        <input asp-for="Email" class="form-control">
+    </div>
+
+    <div class="mb-3">
+        <label asp-for="PhoneNumber" class="form-label">PhoneNumber</label>
+        <input asp-for="PhoneNumber" class="form-control">
+    </div>
+
+    <input type="hidden" asp-for="doctor">
+    <input type="hidden" asp-for="patient">
+    <input type="hidden" asp-for="nurse">
+
+    <button type="submit" class="btn btn-primary">Update Person</button>
+</form>
